@@ -42,10 +42,23 @@ body {
   display: flex;
 }
 
+/* Make search bar bigger and category select smaller */
+.search-section input[type="text"] {
+  flex: 3 1 0%;
+  padding: 18px;
+  font-size: 20px;
+  border: 2px solid #e3a535;
+  border-radius: 8px;
+  outline: none;
+  margin-right: 14px;
+}
+
 .search-section select {
-  width: 100%;
-  padding: 16px;
-  font-size: 18px;
+  flex: 1 1 0%;
+  min-width: 140px;
+  max-width: 220px;
+  padding: 12px;
+  font-size: 16px;
   border: 2px solid #000;
   border-radius: 8px;
   cursor: pointer;
@@ -186,6 +199,7 @@ body {
   display: flex;
   gap: 15px;
   min-height: 160px;
+  transition: box-shadow 0.2s, border 0.2s, transform 0.18s;
 }
 
 .product-card img {
@@ -211,6 +225,20 @@ body {
 .product-card p {
   font-size: 14px;
   color: #666;
+}
+
+/* Add hover effect for product cards */
+.product-card:hover {
+  border: 2px solid #ff003b;
+  box-shadow: 0 4px 18px 0 rgba(227, 165, 53, 0.18), 0 1.5px 8px 0 #e3a535;
+  transform: translateY(-4px) scale(1.025);
+  z-index: 2;
+}
+
+/* Optional: make the info button pop a bit more on hover */
+.product-card:hover .desc-btn {
+  background: #ff003b;
+  color: #fff;
 }
 
 /* selected products */
